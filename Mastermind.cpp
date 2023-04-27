@@ -9,19 +9,18 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    int attempts;
-    // Configurando o gerador de números aleatórios com base no tempo atual
-    srand(time(NULL));
+    int attempts; //tentativas
+    srand(time(NULL)); // Configurando o gerador de números aleatórios com base no tempo atual
 
     bool quit = false;
     while (!quit) {
-        int option;
+        int option; //opção para menu
         cout << "--------------------------------------------------------" << endl;
         cout << "--------------------------------------------------------" << endl;
         cout << endl;
         cout << endl;
-        cout << "                  JOGO DA MEMÓRIA" << endl;
-        cout << "                 Escolha uma opcão: " << endl;
+        cout << "                      Mastermind" << endl;
+        cout << "                  Escolha uma opcão: " << endl;
         cout << endl;
         cout << "                     1 - Jogar" << endl;
         cout << "              2 - Informações do Jogo" << endl;
@@ -38,38 +37,36 @@ int main() {
                 
                 system("clear");
                 
-                int password[4]; // Gerando a senha aleatória
+                int password[4]; // Gera a senha aleatória de 4 digitos
                 for (int i = 0; i < 4; i++) {
                     int digit;
                     do {
-                        digit = rand() % 6 + 1;
+                        digit = rand() % 6 + 1; //Senha apenas pode ser de 1 até 6
                     } while (i > 0 && digit == password[i-1]);
-                    password[i] = digit;
-                    cout << password[i];
+                    password[i] = digit; //Armazena senha
+                    //cout << password[i] << endl; //Use isto para testar
                 }
 
-                attempts = 10; // Jogando o jogo
-                while (attempts > 0) {
-                    // Lendo a tentativa do jogador
+                attempts = 10; // Número de tentativas
+                while (attempts > 0) { // Lendo a tentativa do jogador
                     int guess[4];
                     cout << "Digite a sua tentativa (4 numeros entre 1 e 6) ou digite 0 para sair: ";
                     for (int i = 0; i < 4; i++) {
                         cin >> guess[i];
-                        if (guess[0] == 0) {
-                            attempts = 1; //attempts vira 0 para reniciar
+                        if (guess[0] == 0) { //Se for 0 volta para o menu
+                            attempts = 1;
                             break;
                         }
                         
                     }
 
-                    // Verificando a tentativa
-                    int correct_position = 0, correct_digit = 0;
+                    int correct_position = 0, correct_digit = 0; // Verificando a tentativa
                     for (int i = 0; i < 4; i++) {
-                        if (guess[i] == password[i]) {
+                        if (guess[i] == password[i]) { // Verificando quantos numeros estão na posição correta
                             correct_position++;
                         } else {
                             for (int j = 0; j < 4; j++) {
-                                if (guess[i] == password[j]) {
+                                if (guess[i] == password[j]) { // Verificando quantos numeros estão corretos
                                     correct_digit++;
                                     break;
                                 }
@@ -82,16 +79,15 @@ int main() {
                     cout << "Voce acertou " << correct_digit << " numero(s) corretos, mas na posicao errada.";
                     cout << endl;
 
-                    // Verificando se o jogo acabou
-                    if (correct_position == 4) {
+                    if (correct_position == 4) { //Verificando se o jogador vençeu
                         cout << endl;
                         cout << "Parabens, voce venceu!" << endl;
-                    } else {
+                    } else { //Jogador não terminou o jogo
                         attempts--;
                         cout << "Voce tem " << attempts << " tentativas restantes." << endl;
-                        if (attempts < 0) {
+                        if (attempts < 0) { //Verificando se o jogador gastou todas as tentativas
                             cout << "Voce perdeu! A senha correta era ";
-                            for (int i = 0; i < 4; i++) {
+                            for (int i = 0; i < 4; i++) { //Mostrando a senha correta
                                 cout << password[i];
                             }
                             cout << "." << endl;
