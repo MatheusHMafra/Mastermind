@@ -75,13 +75,13 @@ int main() {
                     }
                     
                     cout << endl; // Exibindo o resultado da tentativa
-                    cout << "Voce acertou " << correct_position << " numero(s) na posicao correta." << endl;
-                    cout << "Voce acertou " << correct_digit << " numero(s) corretos, mas na posicao errada.";
+                    cout << "Você acertou " << correct_position << " numero(s) na posição correta." << endl;
+                    cout << "Você acertou " << correct_digit << " numero(s) corretos, mas na posição errada.";
                     cout << endl;
 
                     if (correct_position == 4) { //Verificando se o jogador vençeu
                         cout << endl;
-                        cout << "Parabens, voce venceu!" << endl;
+                        cout << "Parabéns, você venceu!" << endl;
                     } else { //Jogador não terminou o jogo
                         attempts--;
                         cout << "Voce tem " << attempts << " tentativas restantes." << endl;
@@ -100,19 +100,19 @@ int main() {
                 system("clear");
                 cout << endl;
                 cout << "Equipe de desenvolvimento: Matheus Mafra" << endl;
-                cout << "Mes/ano: Abril/2023" << endl;
+                cout << "Mês/ano: Abril/2023" << endl;
                 cout << endl;
                 break;
             case 3:
                 system("clear");
                 cout << endl;
-                cout << "Obrigado por jogar! Ate a proxima." << endl;
+                cout << "Obrigado por jogar! Até a proxima." << endl;
                 quit = true;
                 break;
             default:
                 system("clear");
                 cout << endl;
-                cout << "Opcao invalida. Tente novamente." << endl;
+                cout << "Opção invalida. Tente novamente." << endl;
                 break;
         }
     }
