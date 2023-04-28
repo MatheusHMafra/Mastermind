@@ -16,12 +16,12 @@ int main() {
     while (!quit) {
         int option; //opção para menu
         cout << "--------------------------------------------------------" << endl;
-        cout << "--------------------------------------------------------" << endl << endl << endl;
+        cout << "--------------------------------------------------------" << endl;
         cout << "                      Mastermind" << endl;
         cout << "                  Escolha uma opcão: " << endl << endl;
         cout << "                     1 - Jogar" << endl;
         cout << "              2 - Informações do Jogo" << endl;
-        cout << "                      3 - Sair" << endl << endl<< endl<< endl;
+        cout << "                      3 - Sair" << endl;
         cout << "--------------------------------------------------------" << endl;
         cout << "--------------------------------------------------------" << endl;
         cin >> option;
