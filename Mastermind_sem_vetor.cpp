@@ -47,31 +47,25 @@ int main() {
                         break;
                     }
                     cin >> guess2>>guess3>>guess4;
-                    if (guess1 == pass1) { // Verificando quantos numeros estão na posição correta
+                    if (guess1 == pass1) { // Verificando se o primeiro número está na posição correta
                         correct_position++;
+                    } else if (guess1 == pass2 || guess1 == pass3 || guess1 == pass4) { // Verificando se o primeiro número está correto mas na posição errada
+                        correct_digit++;
                     }
-                    if (guess2 == pass2){
+                    if (guess2 == pass2) { // Verificando se o segundo número está na posição correta
                         correct_position++;
+                    } else if (guess2 == pass1 || guess2 == pass3 || guess2 == pass4) { // Verificando se o segundo número está correto mas na posição errada
+                        correct_digit++;
                     }
-                    if (guess3 == pass3){
+                    if (guess3 == pass3) { // Verificando se o terceiro número está na posição correta
                         correct_position++;
+                    } else if (guess3 == pass1 || guess3 == pass2 || guess3 == pass4) { // Verificando se o terceiro número está correto mas na posição errada
+                        correct_digit++;
                     }
-                    if (guess4 == pass4){
+                    if (guess4 == pass4) { // Verificando se o quarto número está na posição correta
                         correct_position++;
-                    }
-                    if (correct_position != 4){
-                        if (guess1 == pass2 || guess1 == pass3 || guess1 == pass4) { // Verificando quantos numeros estão na corretos mas na posição errada
-                            correct_digit++;
-                        }
-                        if (guess2 == pass1 || guess2 == pass3 || guess2 == pass4){
-                            correct_digit++;
-                        }
-                        if (guess3 == pass1 || guess3 == pass2 || guess3 == pass4){
-                            correct_digit++;
-                        }
-                        if (guess4 == pass1 || guess4 == pass2 || guess4 == pass3){
-                            correct_digit++;
-                        }
+                    } else if (guess4 == pass1 || guess4 == pass2 || guess4 == pass3) { // Verificando se o quarto número está correto mas na posição errada
+                        correct_digit++;
                     }
                     cout << endl << "Você acertou " << correct_position << " numero(s) na posição correta." << endl; // Exibindo o resultado da tentativa
                     cout << "Você acertou " << correct_digit << " numero(s) corretos, mas na posição errada." << endl;
