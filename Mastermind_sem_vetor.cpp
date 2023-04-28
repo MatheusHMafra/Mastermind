@@ -8,9 +8,8 @@
 using namespace std;
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    int attempts; //tentativas
+    int attempts , guess1, guess2, guess3, guess4; //tentativas e palpites
     int correct_position = 0, correct_digit = 0;
-    int guess1, guess2, guess3, guess4;
     srand(time(NULL)); // Configurando o gerador de números aleatórios com base no tempo atual
 
     bool quit = false;
