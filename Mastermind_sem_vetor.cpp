@@ -1,5 +1,5 @@
 /*
-  Aluno: Matheus Henrique Tomelin Mafra
+  Alunos: Leonardo Borges Lopes, Matheus Henrique Tomelin Mafra, e
 */
 #include <iostream>
 #include <ctime>
@@ -85,7 +85,7 @@ int main() {
             case 2:
                 system("clear");
                 //system("cls");
-                cout << endl << "Equipe de desenvolvimento: Matheus Mafra" << endl;
+                cout << endl << "Equipe de desenvolvimento: Leonardo Borges, Matheus Mafra, e" << endl;
                 cout << "Mês/ano: Abril/2023" << endl;
                 system("read 0 -p");
                 //system("pause");
