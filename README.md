@@ -1,2 +1,2 @@
-# algoritimos
-test
+# Mastermind
+Trabalho feito em c++
