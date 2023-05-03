@@ -1,5 +1,5 @@
 /*
-  Alunos: Leonardo Borges Lopes, Matheus Henrique Tomelin Mafra, e
+  Alunos: Israel Shalom Orel Carvalho, Leonardo Borges Lopes, Lucas Barcia López Hellmann e Matheus Henrique Tomelin Mafra
 */
 #include <iostream>
 #include <ctime>
@@ -85,7 +85,7 @@ int main() {
             case 2:
                 system("clear");
                 //system("cls");
-                cout << endl << "Equipe de desenvolvimento: Leonardo Borges, Matheus Mafra, e" << endl;
+                cout << endl << "Equipe de desenvolvimento: Israel Shalom, Leonardo Borges, Lucas Barcia e Matheus Mafra" << endl;
                 cout << "Mês/ano: Abril/2023" << endl;
                 system("read 0 -p");
                 //system("pause");
