@@ -32,7 +32,7 @@ int main() {
                 do{
                     pass1=rand()%6+1;pass2=rand()%6+1;pass3=rand()%6+1;pass4=rand()%6+1;
                 }while (pass1 == pass2 || pass2 == pass3 || pass3 == pass4 || pass1 == pass3 || pass1 == pass4 || pass2 == pass4);
-                cout<< pass1 << pass2 << pass3 << pass4 << endl; //Use isto para testar
+                //cout<< pass1 << pass2 << pass3 << pass4 << endl; //Use isto para testar
                 attempts = 10; // Número de tentativas
                 while (attempts > 0) { // Lendo a tentativa do jogador
                     cout << "Digite a sua tentativa (4 numeros entre 1 e 6) ou digite 0 para sair: ";
@@ -66,13 +66,20 @@ int main() {
                     cout << endl << "Você acertou " << correct_position << " numero(s) na posição correta." << endl; // Exibindo o resultado da tentativa
                     cout << "Você acertou " << correct_digit << " numero(s) corretos, mas na posição errada." << endl;
                     if (correct_position == 4) { //Verificando se o jogador vençeu
-                        cout << endl << "Parabéns, você venceu!" << endl;
+                        system("clear");
+                        cout << endl << "Parabéns, você venceu! A senha correta era" << endl;
+                        cout << pass1 << pass2 << pass3 << pass4 << "." << endl; //Mostrando a senha correta
+                        system("read 0 -p");
+                        system("clear");
+                        break;
                     } else { //Jogador não terminou o jogo
                         attempts--;
                         cout << "Voce tem " << attempts << " tentativas restantes." << endl;
-                        if (attempts < 0) { //Verificando se o jogador gastou todas as tentativas
+                        if (attempts <= 0) { //Verificando se o jogador gastou todas as tentativas
                             cout << "Voce perdeu! A senha correta era ";
                             cout << pass1 << pass2 << pass3 << pass4 << "." << endl; //Mostrando a senha correta
+                            system("read 0 -p");
+                            system("clear");
                             break;
                         }
                     }
