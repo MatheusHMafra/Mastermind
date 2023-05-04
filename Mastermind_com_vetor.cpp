@@ -1,5 +1,5 @@
 /*
-  Aluno: Matheus Henrique Tomelin Mafra
+  Alunos: Israel Shalom Orel Carvalho, Leonardo Borges Lopes, Lucas Barcia López Hellmann e Matheus Henrique Tomelin Mafra
 */
 #include <iostream>
 #include <ctime>
