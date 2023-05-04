@@ -83,7 +83,8 @@ int main() {
                 system("clear");
                 cout << "Equipe de desenvolvimento: Israel Shalom, Leonardo Borges, Lucas Barcia e Matheus Mafra" << endl;
                 cout << "Mês/ano: Abril/2023" << endl;
-                cout << "Professor: Rael Balottin" << endl << "Disciplina: Algorítios e Programação";
+                cout << "Professor: Rael Balottin" << endl;
+                cout << "Disciplina: Algorítios e Programação" << endl;
                 system("read 0 -p");
                 system("clear");
                 break;
