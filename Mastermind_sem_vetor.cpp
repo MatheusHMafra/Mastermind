@@ -4,7 +4,6 @@
 #include <iostream>
 #include <ctime>
 #include <locale.h>
-//#include <windows.h>
 using namespace std;
 int main() {
     setlocale(LC_ALL, "Portuguese");
@@ -29,7 +28,6 @@ int main() {
         switch (option) {
             case 1:
                 system("clear");
-                //system("cls");
                 int pass1, pass2, pass3, pass4;// Gera a senha aleatória de 4 digitos
                 do{
                     pass1=rand()%6+1;pass2=rand()%6+1;pass3=rand()%6+1;pass4=rand()%6+1;
@@ -42,7 +40,6 @@ int main() {
                     if (guess1 == 0) { //Se for 0 volta para o menu
                         attempts = 1;
                         system("clear");
-                        //system("cls");
                         break;
                     }
                     cin >> guess2>>guess3>>guess4;
@@ -84,29 +81,22 @@ int main() {
                 break;
             case 2:
                 system("clear");
-                //system("cls");
                 cout << "Equipe de desenvolvimento: Israel Shalom, Leonardo Borges, Lucas Barcia e Matheus Mafra" << endl;
                 cout << "Mês/ano: Abril/2023" << endl;
                 cout << "Professor: Rael Balottin" << endl << "Disciplina: Algorítios e Programação";
                 system("read 0 -p");
-                //system("pause");
                 system("clear");
-                //system("cls");
                 break;
             case 3:
                 system("clear");
-                //system("cls");
                 cout  << endl << "Obrigado por jogar! Até a proxima." << endl;
                 quit = true;
                 break;
             default:
                 system("clear");
-                //system("cls");
                 cout  << endl << "Opção invalida. Tente novamente." << endl;
                 system("read 0 -p");
-                //system("pause");
                 system("clear");
-                //system("cls");
                 break;
         }
     }
