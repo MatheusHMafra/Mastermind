@@ -20,8 +20,8 @@ int main() {
         cout << "                      Mastermind" << endl;
         cout << "                  Escolha uma opcão: " << endl << endl;
         cout << "                     1 - Jogar" << endl;
-        cout << "              2 - Informações do Jogo" << endl;
-        cout << "                      3 - Sair" << endl;
+        cout << "                     2 - Sobre" << endl;
+        cout << "                     3 - Sair" << endl;
         cout << "--------------------------------------------------------" << endl;
         cout << "--------------------------------------------------------" << endl;
         cin >> option;
@@ -85,8 +85,9 @@ int main() {
             case 2:
                 system("clear");
                 //system("cls");
-                cout << endl << "Equipe de desenvolvimento: Israel Shalom, Leonardo Borges, Lucas Barcia e Matheus Mafra" << endl;
+                cout << "Equipe de desenvolvimento: Israel Shalom, Leonardo Borges, Lucas Barcia e Matheus Mafra" << endl;
                 cout << "Mês/ano: Abril/2023" << endl;
+                cout << "Professor: Rael Balottin" << endl << "Disciplina: Algorítios e Programação";
                 system("read 0 -p");
                 //system("pause");
                 system("clear");
